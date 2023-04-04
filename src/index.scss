@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: 'PT Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  background: #FFFFFF;
+  max-width: 1400px;
+  margin: 170px auto;
+
+  .mainName {
+    h1 {
+      margin: 0;
+      padding: 0 78px;
+      font-size: 56px;
+      width: 353px;
+      color: #42567A;
+    }
+  }
+
+  .mainName:before {
+    content: " ";
+    float: left;
+    height: 128px;
+    width: 4px;
+    background: linear-gradient(#3877EE, #EF5DA8);
+  }
+
+
+}
