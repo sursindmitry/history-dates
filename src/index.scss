@@ -5,9 +5,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  font-family: 'PT Sans', sans-serif;
+}
+
 .wrapper {
   background: #FFFFFF;
   max-width: 1400px;
+  max-height: 1080px;
   margin: 170px auto;
 
   // Name
@@ -27,6 +32,123 @@ body {
     height: 128px;
     width: 4px;
     background: linear-gradient(#3877EE, #EF5DA8);
+  }
+
+
+  // Circle
+  .circularMenu {
+    position: relative;
+    width: 530px;
+    height: 530px;
+    border-radius: 50%;
+    border: 1px solid #42567A;
+    opacity: 0.2;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    .game {
+      position: absolute;
+      left: 380px;
+      top: 23px;
+    }
+
+    .theater {
+      position: absolute;
+      left: 525px;
+      top: 250px;
+    }
+
+    .science {
+      position: absolute;
+      left: 415px;
+      top: 475px;
+    }
+
+    .literature {
+      position: absolute;
+      left: 105px;
+      top: 475px;
+    }
+
+    .movies {
+      position: absolute;
+      left: -5px;
+      top: 250px;
+    }
+
+    .history {
+      position: absolute;
+      left: 154px;
+      top: 16px;
+    }
+
+    .circularMenu__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      text-decoration: none;
+      color: #42567A;
+      border: 1px solid rgba(48, 62, 88, 0.5);
+      background-color: black;
+      cursor: pointer;
+    }
+  }
+
+  .navigationArrows {
+    .navNumbers {
+      margin-left: 80px;
+      margin-bottom: 20px;
+      color: #42567A;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .btnLeft {
+      margin-left: 80px;
+    }
+
+    .btnRight {
+      margin-left: 20px;
+    }
+
+    button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1px solid rgba(66, 86, 122, 0.5);
+      cursor: pointer;
+      transition: box-shadow 0.2s ease-in-out;
+
+
+      &:hover {
+        border: 1px solid rgba(66, 86, 122, 0.5);
+        box-shadow: 0 0 5px rgba(56, 119, 238, 0.30);
+      }
+
+      i {
+        border: solid #42567A80;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+      }
+
+      .arrowRight {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+
+      .arrowLeft {
+
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+      }
+
+    }
   }
 
   //cards
