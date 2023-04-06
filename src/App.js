@@ -1,3 +1,5 @@
+import Circle from "./components/Circle/Circle";
+
 function App() {
     return (
         <div className="App">
@@ -5,16 +7,7 @@ function App() {
                 <div className="mainName">
                     <h1>Исторические даты</h1>
                 </div>
-
-                <div className="circularMenu">
-                    <span className="game"><i className="circularMenu__item"></i></span>
-                    <span className="theater"><i className="circularMenu__item"></i></span>
-                    <span className="science"><i className="circularMenu__item"></i></span>
-                    <span className="literature"><i className="circularMenu__item"></i></span>
-                    <span className="movies"><i className="circularMenu__item"></i></span>
-                    <span className="history"><i className="circularMenu__item"></i></span>
-                </div>
-
+                <Circle/>
                 <div className="navigationArrows">
                     <div className="navNumbers">06/06</div>
                     <button className="btnLeft"><i className="arrowLeft"></i></button>
