@@ -1,0 +1,28 @@
+.circular-menu {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 530px;
+  height: 530px;
+  border: 1px solid #42567A;
+  border-radius: 50%;
+}
+
+.years {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+
+  b {
+    margin: 40px;
+    font-size: 200px;
+    cursor: auto;
+    -webkit-user-select: none;
+  }
+}

@@ -1,4 +1,5 @@
-import Circle from "./components/Circle/Circle";
+import MenuItem from "./components/Circle/MenuItem";
+import CircleMenu from "./components/Circle/CircleMenu";
 
 function App() {
     return (
@@ -7,7 +8,7 @@ function App() {
                 <div className="mainName">
                     <h1>Исторические даты</h1>
                 </div>
-                <Circle/>
+                <CircleMenu/>
                 <div className="navigationArrows">
                     <div className="navNumbers">06/06</div>
                     <button className="btnLeft"><i className="arrowLeft"></i></button>
