@@ -21,19 +21,22 @@ const setMenu = () => {
 }
 
 
-const MenuItem = ({id, active, onClick, text}) => {
+const MenuItem = ({buttonText, buttonId, isActive, onClick}) => {
+
     useEffect(() => {
         setMenu();
     })
+    console.log(onClick)
     return (
         <div className={`menu__item`}>
             <i
-                className={`menu-item ${active ? 'active' : ''}`}
-                onClick={() => onClick(id)}
+
+                onClick={() => onClick(buttonId)}
+                className={`menu-item ${isActive ? 'active' : ''}`}
             >
-                {id}
+                {buttonId}
             </i>
-            <b className="menu-item-text">{text}</b>
+            <b className="menu-item-text">{buttonText}</b>
         </div>
     );
 };
