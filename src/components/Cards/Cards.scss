@@ -2,14 +2,20 @@
   display: flex;
   cursor: grab;
   -webkit-user-select: none;
+  margin-left: 80px;
 
+  .spaceBetween{
+    margin-right: 1000px;
+  }
 }
 
+.swiper-slide {
+  width: auto;
+}
 
 .my-swiper-button-next {
   display: flex;
   align-items: center;
-  margin-left: 80px;
 
   button {
     width: 40px;
@@ -69,6 +75,24 @@
     .arrowLeft {
       transform: rotate(135deg);
       -webkit-transform: rotate(135deg);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .swiper-slide {
+    width: auto;
+  }
+  .cards {
+    margin-left: 20px;
+
+    .my-swiper-button-next {
+      display: none;
+    }
+
+    .my-swiper-button-prev {
+      display: none;
+
     }
   }
 }

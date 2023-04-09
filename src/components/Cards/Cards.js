@@ -17,6 +17,11 @@ const arr = [
     },
     {
         id: 1,
+        year: 1925,
+        description: "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды"
+    },
+    {
+        id: 1,
         year: 1926,
         description: "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды"
     },
@@ -110,15 +115,24 @@ const arr = [
 const Cards = ({currentId}) => {
     const swiperParams = {
         modules: [Navigation, Pagination, Scrollbar],
-        spaceBetween: 50,
-        slidesPerView: 3,
+        spaceBetween: 80,
+        slidesPerView: 1,
+        breakpoints:{
+            1285:{
+                spaceBetween: 60,
+                slidesPerView: 3
+            },
+            740:{
+                spaceBetween: 300,
+                slidesPerView: 3
+            },
+        },
+
         navigation: {
             nextEl: '.my-swiper-button-next', // указываем класс кнопки "следующий слайд"
             prevEl: '.my-swiper-button-prev' // указываем класс кнопки "предыдущий слайд"
         },
         pagination: {clickable: true},
-        onSwiper: (swiper) => console.log(swiper),
-        onSlideChange: () => console.log('slide change')
     };
 
     const filteredArr = arr.filter((obj) => obj.id === currentId);
@@ -142,9 +156,7 @@ const Cards = ({currentId}) => {
                 <button>
                     <i className="arrowRight"></i>
                 </button>
-
             </div>
-
         </div>
     )
 }

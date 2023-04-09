@@ -26,24 +26,26 @@ const CircleMenu = ({activeButton, setActiveButton}) => {
     ];
 
     return (
-        <div className="circular-menu">
-            {filteredArr.map((obj) => (
-                <div className="years">
-                    <b style={{color: "#5D5FEF"}}>{obj.leftYear}</b>
-                    <b style={{color: "#EF5DA8"}}>{obj.rightYear}</b>
-                </div>
-            ))}
-            <div className="menu-content">
-
-                {menuItems.map((item) => (
-                    <MenuItem
-                        key={item.buttonId}
-                        buttonText={item.buttonText}
-                        buttonId={item.buttonId}
-                        isActive={activeButton === item.buttonId}
-                        onClick={() => handleButtonClick(item.buttonId)}
-                    />
+        <div className="circle">
+            <div className="circular-menu">
+                {filteredArr.map((obj) => (
+                    <div className="years">
+                        <b style={{color: "#5D5FEF"}}>{obj.leftYear}</b>
+                        <b style={{color: "#EF5DA8"}}>{obj.rightYear}</b>
+                    </div>
                 ))}
+                <div className="menu-content">
+
+                    {menuItems.map((item) => (
+                        <MenuItem
+                            key={item.buttonId}
+                            buttonText={item.buttonText}
+                            buttonId={item.buttonId}
+                            isActive={activeButton === item.buttonId}
+                            onClick={() => handleButtonClick(item.buttonId)}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

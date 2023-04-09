@@ -5,10 +5,10 @@
   margin: 0 auto;
   width: 530px;
   height: 530px;
-  border: 1px solid #42567A;
   border-radius: 50%;
 }
-.menu-content{
+
+.menu-content {
   position: relative;
   align-items: center;
   justify-content: center;
@@ -19,6 +19,7 @@
   border-radius: 50%;
   transform-origin: center;
 }
+
 .years {
   position: absolute;
   top: 50%;
@@ -34,5 +35,45 @@
     font-size: 200px;
     cursor: auto;
     -webkit-user-select: none;
+  }
+}
+
+@media screen  and (max-width: 1000px) {
+  .circle {
+    width: 100%;
+    margin-top: 100px;
+  }
+  .circular-menu{
+    position: relative;
+    width: 100vw;
+    height: 200px;
+    border: 0;
+
+  }
+  .menu-content{
+    float: left;
+    left: 0;
+    border: none;
+    width: 0;
+    height: 0;
+    top: 200px;
+    margin: 0 auto;
+  }
+  .years{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+
+    b {
+      margin: 15px;
+      font-size: 75px;
+      cursor: auto;
+      -webkit-user-select: none;
+    }
   }
 }

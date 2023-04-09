@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: 'PT Sans', sans-serif;
@@ -8,12 +9,43 @@ body {
 * {
   font-family: 'PT Sans', sans-serif;
 }
+.createLines {
+  .center {
 
+  }
+
+  .left {
+    padding-left: 80px;
+    position: relative;
+    display: inline-block;
+  }
+
+  :before {
+    content: " ";
+    background: #33CCFF;
+    width: 1px;
+    height: auto;
+    min-height: 100vh;
+    top: 0;
+    position: absolute;
+  }
+
+  :after {
+    content: " ";
+    background: #33CCFF;
+    width: 1px;
+    height:1vh ;
+    position: absolute;
+  }
+}
 .wrapper {
   background: #FFFFFF;
   max-width: 1400px;
   max-height: 1080px;
   margin: 170px auto;
+
+
+
 
   // Name
   .mainName {
@@ -32,5 +64,30 @@ body {
     height: 128px;
     width: 4px;
     background: linear-gradient(#3877EE, #EF5DA8);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .wrapper {
+    background: #FFFFFF;
+    max-width: 1000px;
+    max-height: 1080px;
+    margin: 100px auto;
+  }
+
+  .wrapper .mainName h1 {
+    padding: 0 20px;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 56px;
+    color: #42567A;
+  }
+
+  .mainName:before {
+    display: none;
   }
 }
