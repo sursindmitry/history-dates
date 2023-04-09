@@ -26,7 +26,6 @@ const MenuItem = ({buttonText, buttonId, isActive, onClick}) => {
     useEffect(() => {
         setMenu();
     })
-    console.log(onClick)
     return (
         <div className={`menu__item`}>
             <i

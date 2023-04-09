@@ -3,6 +3,7 @@ import CircleMenu from "./components/Circle/CircleMenu";
 import Navigation from "./components/Navigation/Navigation";
 import Cards from "./components/Cards/Cards";
 
+
 function App() {
     const [activeButton, setActiveButton] = useState(1);
 
@@ -22,6 +23,8 @@ function App() {
                 <Navigation onCountData={handleCountData}/>
                 <Cards/>
             </div>
+
+
         </div>
     );
 }
