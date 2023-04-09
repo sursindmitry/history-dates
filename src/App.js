@@ -21,10 +21,8 @@ function App() {
                 </div>
                 <CircleMenu activeButton={activeButton} setActiveButton={setActiveButton}/>
                 <Navigation onCountData={handleCountData}/>
-                <Cards/>
+                <Cards currentId={activeButton}/>
             </div>
-
-
         </div>
     );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import "./Cards.scss"
 import Card from "./Card";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
+import {Navigation, Pagination, Scrollbar} from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -11,30 +11,105 @@ import 'swiper/css/scrollbar';
 
 const arr = [
     {
-        year: 2015,
+        id: 1,
+        year: 1925,
         description: "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды"
     },
     {
-        year: 2016,
+        id: 1,
+        year: 1926,
+        description: "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды"
+    },
+    {
+        id: 1,
+        year: 1927,
+        description: "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды"
+    },
+    {
+        id: 2,
+        year: 2000,
         description: "Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик, получившую обозначение GN-z11"
     },
     {
-        year: 2017,
+        id: 2,
+        year: 2001,
+        description: "Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик, получившую обозначение GN-z11"
+    },
+    {
+        id: 2,
+        year: 2002,
+        description: "Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик, получившую обозначение GN-z11"
+    },
+    {
+        id: 3,
+        year: 2003,
         description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
     },
     {
+        id: 3,
+        year: 2004,
+        description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
+    },
+    {
+        id: 3,
+        year: 2005,
+        description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
+    },
+    {
+        id: 4,
         year: 2019,
         description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
     },
     {
+        id: 4,
+        year: 2020,
+        description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
+    },
+    {
+        id: 4,
+        year: 2021,
+        description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
+    },
+    {
+        id: 5,
         year: 2022,
         description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
     },
+    {
+        id: 5,
+        year: 2023,
+        description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
+    },
+    {
+        id: 5,
+        year: 2024,
+        description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
+    },
+    {
+        id: 6,
+        year: 2025,
+        description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
+    },
+    {
+        id: 6,
+        year: 2026,
+        description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
+    },
+    {
+        id: 6,
+        year: 2026,
+        description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
+    },
+    {
+        id: 6,
+        year: 2027,
+        description: "Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi"
+    }
 ]
 
-const Cards = () => {
+const Cards = ({currentId}) => {
     const swiperParams = {
-        modules: [Navigation, Pagination, Scrollbar, A11y],
+        modules: [Navigation, Pagination, Scrollbar],
         spaceBetween: 50,
         slidesPerView: 3,
         navigation: {
@@ -46,6 +121,8 @@ const Cards = () => {
         onSlideChange: () => console.log('slide change')
     };
 
+    const filteredArr = arr.filter((obj) => obj.id === currentId);
+
     return (
         <div className="cards">
             <div className="my-swiper-button-prev">
@@ -55,7 +132,7 @@ const Cards = () => {
             </div>
             <Swiper{...swiperParams}
             >
-                {arr.map((obj) => (
+                {filteredArr.map((obj) => (
                     <SwiperSlide>
                         <Card year={obj.year} description={obj.description}/>
                     </SwiperSlide>
