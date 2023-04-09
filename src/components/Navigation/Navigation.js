@@ -2,16 +2,17 @@ import React, {useState} from "react";
 import PropTypes from "prop-types";
 import "./Navigation.scss";
 
-const Navigation = ({onCountData}) => {
-    const [count, setCount] = useState(1);
-
+const Navigation = ({activeButton, onCountData}) => {
+    let [count, setCount] = useState(1);
     const handleDec = () => {
+        count = activeButton
         const updatedCount = count === 1 ? 6 : count - 1;
         setCount(updatedCount);
         onCountData(updatedCount);
     };
 
     const handleInc = () => {
+        count = activeButton
         const updatedCount = count === 6 ? 1 : count + 1;
         setCount(updatedCount);
         onCountData(updatedCount);

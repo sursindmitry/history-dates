@@ -6,11 +6,9 @@ import Cards from "./components/Cards/Cards";
 
 function App() {
     const [activeButton, setActiveButton] = useState(1);
-
     const handleCountData = (count) => {
         setActiveButton(count);
     };
-
 
 
     return (
@@ -20,7 +18,7 @@ function App() {
                     <h1>Исторические даты</h1>
                 </div>
                 <CircleMenu activeButton={activeButton} setActiveButton={setActiveButton}/>
-                <Navigation onCountData={handleCountData}/>
+                <Navigation activeButton={activeButton} onCountData={handleCountData}/>
                 <Cards currentId={activeButton}/>
             </div>
         </div>
