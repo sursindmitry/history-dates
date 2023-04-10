@@ -27,6 +27,8 @@ const CircleMenu = ({activeButton, setActiveButton}) => {
 
     return (
         <div className="circle">
+            <div className="centerHeight"/>
+            <div className="centerWidth"/>
             <div className="circular-menu">
                 {filteredArr.map((obj) => (
                     <div className="years">

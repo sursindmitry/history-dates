@@ -15,6 +15,10 @@ function App() {
         <div className="App">
 
             <div className="wrapper">
+                <div className="createLines">
+                    <div className="left"/>
+                    <div className="right"/>
+                </div>
 
                 <div className="mainName">
                     <h1>Исторические даты</h1>

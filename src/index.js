@@ -6,10 +6,6 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <div className="createLines">
-          {/*<div className="center"/>*/}
-          <div className="left"/>
-      </div>
     <App />
   </React.StrictMode>
 );

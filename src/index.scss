@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'PT Sans', sans-serif;
@@ -9,43 +8,41 @@ body {
 * {
   font-family: 'PT Sans', sans-serif;
 }
+
 .createLines {
-  .center {
-
-  }
-
+  position: fixed;
   .left {
-    padding-left: 80px;
-    position: relative;
-    display: inline-block;
+    content: " ";
+    background: rgba(66, 86, 122, 1);
+    width: 1px;
+    height: auto;
+    min-height: 100vh;
+    top: 200px;
+    margin-top: -170px;
+    opacity: 0.1;
+
   }
 
-  :before {
+  .right {
+    position: absolute;
+    left: 1440px;
     content: " ";
-    background: #33CCFF;
+    background: rgba(66, 86, 122, 1);
     width: 1px;
     height: auto;
     min-height: 100vh;
     top: 0;
-    position: absolute;
+    margin-top: -170px;
+    opacity: 0.1;
   }
 
-  :after {
-    content: " ";
-    background: #33CCFF;
-    width: 1px;
-    height:1vh ;
-    position: absolute;
-  }
 }
+
 .wrapper {
   background: #FFFFFF;
-  max-width: 1400px;
+  max-width: 1440px;
   max-height: 1080px;
   margin: 170px auto;
-
-
-
 
   // Name
   .mainName {
